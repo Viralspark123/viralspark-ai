@@ -1,0 +1,17 @@
+{
+  "name": "ViralSpark AI - Operating System For Viral Creators",
+  "short_name": "ViralSpark AI",
+  "description": "AI trained on 10M+ viral posts. Generate viral hooks in 1.2s. 3 FREE tries.",
+  "start_url": "/viralspark-ai/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#7C3AED",
+  "icons": [
+    {
+      "src": "https://viralspark123.github.io/viralspark-ai/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
