@@ -1,10 +1,65 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ViralSpark QUANTUM-1 ULTIMATE</title><script src="https://cdn.tailwindcss.com"></script><script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<style>.glow{box-shadow:0 0 30px #8b5cf655;animation:glow 2s infinite alternate}@keyframes glow{from{box-shadow:0 0 20px #8b5cf655}to{box-shadow:0 0 40px #8b5cf6aa}}.think-dot{width:8px;height:8px;background:#8b5cf6;border-radius:50%;display:inline-block;animation:bounce 1.4s infinite}.think-dot:nth-child(2){animation-delay:.2s}.think-dot:nth-child(3){animation-delay:.4s}@keyframes bounce{0%,80%,100%{transform:scale(0)}40%{transform:scale(1)}}</style></head>
-<body style="background:#07070a;color:white;font-family:sans-serif;padding:15px">
-<div style="text-align:center;margin-top:20px"><h1 style="font-size:26px;font-weight:900">VIRALSPARK <span style="color:#8b5cf6">QUANTUM-1</span> <span style="background:#10b981;color:#000;font-size:10px;padding:4px 12px;border-radius:20px">LIVE • REAL AI • RAZORPAY LIVE</span></h1><p style="color:#888;margin-top:8px">India's 1st Viral Superintelligence • ULTIMATE • REAL Llama 3.3 70B</p></div>
-<div style="max-width:700px;margin:25px auto;background:#12121a;border:1px solid #2a2a3a;border-radius:20px;padding:18px" class="glow"><div style="display:flex;gap:8px"><input id="q" style="flex:1;padding:14px;border-radius:30px;background:#1e1e2a;border:1px solid #333;color:white" placeholder="Ask: Make my chai reel viral, give 3 hooks..."><button onclick="ask()" style="padding:14px 24px;border-radius:30px;background:white;color:black;font-weight:900">Ask QUANTUM-1</button></div><div id="think" style="display:none;margin-top:15px;background:#18181b;border:1px solid #333;padding:14px;border-radius:14px;text-align:center"><span class="think-dot"></span> <span class="think-dot"></span> <span class="think-dot"></span><span style="margin-left:10px;color:#a78bfa">QUANTUM-1 is thinking — Analyzing viral DNA with REAL AI...</span></div><div id="ans" style="margin-top:15px;background:#0f0f14;border:1px solid #222;padding:16px;border-radius:14px;white-space:pre-wrap;min-height:100px;color:#e5e5e5">🤖 REAL AI answer will appear here — Same design, now REAL Groq Llama 3.3 70B (No demo)...</div></div>
-<div style="max-width:700px;margin:20px auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px"><div style="background:#18181b;border:1px solid #333;padding:16px;border-radius:18px;text-align:center" class="glow"><h3 style="font-weight:800">PRO</h3><p style="font-size:22px;font-weight:900;color:#8b5cf6">₹199</p><button onclick="pay(199)" style="width:100%;margin-top:10px;padding:10px;border-radius:30px;background:#8b5cf6;color:white;font-weight:bold">Pay LIVE</button></div><div style="background:#1e1a2a;border:1px solid #8b5cf6;padding:16px;border-radius:18px;text-align:center" class="glow"><h3 style="font-weight:800">BUSINESS</h3><p style="font-size:22px;font-weight:900;color:#ec4899">₹599</p><button onclick="pay(599)" style="width:100%;margin-top:10px;padding:10px;border-radius:30px;background:linear-gradient(90deg,#8b5cf6,#ec4899);color:white;font-weight:bold">Pay LIVE</button></div><div style="background:#2a1a2a;border:1px solid #ec4899;padding:16px;border-radius:18px;text-align:center" class="glow"><h3 style="font-weight:800">ULTRA</h3><p style="font-size:22px;font-weight:900;color:#f59e0b">₹1699</p><button onclick="pay(1699)" style="width:100%;margin-top:10px;padding:10px;border-radius:30px;background:linear-gradient(90deg,#f59e0b,#ec4899);color:white;font-weight:bold">Pay LIVE</button></div></div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ViralSpark AI - Purple Ultimate</title>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a14;color:#fff;font-family:Inter,sans-serif;padding-bottom:90px}
+.header{margin:14px;padding:16px;border-radius:20px;background:linear-gradient(135deg,rgba(20,15,35,0.9),rgba(10,10,20,0.9));border:1px solid rgba(168,85,247,0.4);box-shadow:0 0 25px rgba(168,85,247,0.25),0 0 60px rgba(255,215,0,0.15);display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#FFD700,#a855f7);display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 0 20px rgba(168,85,247,0.6);border:2px solid rgba(255,215,0,0.5)}
+.card{margin:12px;padding:18px;border-radius:18px;background:linear-gradient(180deg,rgba(20,15,30,0.9),rgba(10,10,20,0.95));border:1px solid rgba(255,255,255,0.1);position:relative}
+.card.pro{border-color:rgba(255,215,0,0.6);box-shadow:0 0 15px rgba(255,215,0,0.4),0 0 40px rgba(255,215,0,0.15)}
+.card.ultra{border-color:rgba(168,85,247,0.8);box-shadow:0 0 25px rgba(168,85,247,0.6),0 0 60px rgba(168,85,247,0.3)}
+.badge{position:absolute;top:12px;right:12px;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700}
+.pro .badge{background:linear-gradient(90deg,#FFD700,#ffae00);color:#000}
+.ultra .badge{background:rgba(168,85,247,0.3);border:1px solid #c084fc;color:#e9d5ff}
+.price{font-size:34px;font-weight:900;margin:6px 0}
+.pro .price{color:#ffe27a}.ultra .price{color:#c084fc}.business .price{color:#d8b4fe}
+.price span{font-size:14px;opacity:0.7}
+.feat{font-size:13px;color:#cbd5e1;margin:4px 0}
+.btn{margin-top:12px;width:100%;padding:12px;border-radius:12px;border:none;font-weight:700;cursor:pointer}
+.pro .btn{background:linear-gradient(90deg,#FFD700,#ffae00);color:#000}
+.ultra .btn{background:linear-gradient(90deg,#a855f7,#7c3aed);color:#fff;box-shadow:0 0 25px rgba(168,85,247,0.6)}
+.business .btn{background:rgba(168,85,247,0.2);border:1px solid #a855f7;color:#c084fc}
+.bottom{position:fixed;bottom:10px;left:10px;right:10px;background:rgba(15,10,25,0.85);backdrop-filter:blur(20px);border:1px solid rgba(168,85,247,0.4);border-radius:22px;display:flex;justify-content:space-around;padding:10px 0;box-shadow:0 0 30px rgba(168,85,247,0.4);z-index:99}
+.b-item{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;color:#94a3b8;cursor:pointer}
+.b-item.active{color:#c084fc;text-shadow:0 0 10px rgba(168,85,247,0.8)}
+.page{display:none;padding:6px}.page.active{display:block}
+.live-badge{display:inline-block;background:#22c55e;color:#000;font-size:10px;padding:3px 8px;border-radius:10px;font-weight:800;margin-left:8px}
+</style>
+</head>
+<body>
+<div class="header"><div class="logo">⚡</div><div><div style="font-size:22px;font-weight:800">ViralSpark AI <span class="live-badge">LIVE: rzp_live_TpGTvl0tOG4uYY</span></div><div style="font-size:12px;color:#c4b5fd">Purple Ultimate • AI Growth Engine ✨</div></div></div>
+
+<div id="page-home" class="page active"><div style="padding:14px"><h2>Viral Growth. Supercharged with AI.</h2><p style="color:#a78bfa;font-size:13px;margin-top:6px">Launch campaigns, spark virality, track performance. 3 FREE → Login → Pay LIVE</p><h2 style="margin:18px 0 10px">Choose Your Plan ✨</h2>
+<div class="card pro"><span class="badge">POPULAR</span><div style="color:#ffe27a;font-weight:800">PRO</div><div class="price">₹199 <span>/month</span></div><div class="feat">✓ 10K AI Credits/month</div><div class="feat">✓ Basic Viral Analytics</div><div class="feat">✓ 5 Campaigns Active</div><button class="btn" onclick="pay(199,'PRO')">Pay LIVE</button></div>
+<div class="card business" style="border-color:rgba(168,85,247,0.5)"><span class="badge" style="background:rgba(168,85,247,0.25);border:1px solid #a855f7;color:#d8b4fe">MOST USED</span><div style="font-weight:800">BUSINESS</div><div class="price">₹599 <span>/month</span></div><div class="feat">✓ 50K AI Credits/month</div><div class="feat">✓ Advanced Analytics</div><div class="feat">✓ 25 Campaigns Active</div><button class="btn" onclick="pay(599,'BUSINESS')">Pay LIVE</button></div>
+<div class="card ultra"><span class="badge">ULTIMATE</span><div style="color:#c084fc;font-weight:800">ULTRA</div><div class="price">₹1699 <span>/month</span></div><div class="feat">✓ 200K AI Credits/month</div><div class="feat">✓ Full AI Suite + Automation</div><div class="feat">✓ Unlimited Campaigns</div><div class="feat">✓ 1:1 Growth Consultant</div><button class="btn" onclick="pay(1699,'ULTRA')">Pay LIVE</button></div>
+<div style="text-align:center;margin:20px 0;color:#22c55e;font-weight:700;font-size:12px">LIVE KEY CONFIRMED IN SITE<br>rzp_live_TpGTvl0tOG4uYY</div></div></div>
+
+<div id="page-spark" class="page"><div style="padding:16px"><h2>✨ Spark Ideas</h2><p style="color:#a78bfa;margin:8px 0">Generate viral hooks (Free 3 times)</p><textarea id="sparkInput" placeholder="Make my chai reel viral..." style="width:100%;height:80px;border-radius:12px;background:rgba(20,15,30,0.9);border:1px solid rgba(168,85,247,0.4);color:#fff;padding:12px"></textarea><button class="btn" style="background:linear-gradient(90deg,#a855f7,#7c3aed);color:#fff;margin-top:10px" onclick="gen()">Generate Viral Ideas</button><div id="sparkOut" style="margin-top:12px;padding:12px;border-radius:12px;background:rgba(10,10,20,0.9);border:1px solid rgba(168,85,247,0.3);min-height:60px;font-size:13px;color:#e9d5ff">Your viral ideas will appear here...</div></div></div>
+<div id="page-analytics" class="page"><div style="padding:16px"><h2>📊 Analytics</h2><div class="card"><div class="feat">Total Views: 12.5K ↑ 23%</div><div class="feat">Viral Score: 8.7/10</div><div class="feat">Growth: +142% this week</div></div></div></div>
+<div id="page-campaigns" class="page"><div style="padding:16px"><h2>📢 Campaigns</h2><div class="card pro"><div style="font-weight:700">Chai Reel Campaign - LIVE</div><div class="feat">✓ 3 hooks generated</div></div></div></div>
+<div id="page-credits" class="page"><div style="padding:16px"><h2>🪙 Credits</h2><div class="card ultra"><div class="price">3 <span>Free Left</span></div><div class="feat">After 3 free → Login → Pay LIVE</div></div></div></div>
+<div id="page-profile" class="page"><div style="padding:16px"><h2>👤 Profile</h2><div class="card"><div class="feat">Founder from Darrang</div><div class="feat">Plan: Free (3/3)</div><div class="feat">LIVE: rzp_live_TpGTvl0tOG4uYY</div></div></div></div>
+
+<div class="bottom">
+<div class="b-item active" onclick="nav('home',this)">🏠<br>Home</div>
+<div class="b-item" onclick="nav('spark',this)">✨<br>Spark</div>
+<div class="b-item" onclick="nav('analytics',this)">📊<br>Analytics</div>
+<div class="b-item" onclick="nav('campaigns',this)">📢<br>Campaigns</div>
+<div class="b-item" onclick="nav('credits',this)">🗄️<br>Credits</div>
+<div class="b-item" onclick="nav('profile',this)">👤<br>Profile</div>
+</div>
+
 <script>
-async function ask(){let txt=document.getElementById('q').value;if(!txt)return;document.getElementById('think').style.display='block';document.getElementById('ans').innerText='';try{let res=await fetch('/api/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({q:txt})});let data=await res.json();document.getElementById('think').style.display='none';if(data.choices){document.getElementById('ans').innerText=data.choices[0].message.content}else{document.getElementById('ans').innerText='Error: '+JSON.stringify(data).slice(0,600)}}catch(e){document.getElementById('think').style.display='none';document.getElementById('ans').innerText='Error:'+e.message}}
-function pay(amt){var options={key:'rzp_live_TpGTvl0tOG4uYY',amount:amt*100,currency:'INR',name:'ViralSpark QUANTUM-1',description:'Plan ₹'+amt,handler:function(r){alert('✅ PAYMENT SUCCESS! ID:'+r.razorpay_payment_id+' - Welcome to QUANTUM-1!')},theme:{color:'#8b5cf6'}};new Razorpay(options).open();}
-</script></body></html>
+let freeCount=3;
+function nav(p,el){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById('page-'+p).classList.add('active');document.querySelectorAll('.b-item').forEach(x=>x.classList.remove('active'));el.classList.add('active');}
+function gen(){if(freeCount<=0){alert('3 FREE over! Pay LIVE ₹199');return}const q=document.getElementById('sparkInput').value||'viral idea';document.getElementById('sparkOut').innerText='🔥 For: '+q+'\n\n1. "This chai secret nobody tells you..."\n2. "I tried viral chai hack for 7 days"\n3. "POV: Your chai goes viral"\n';freeCount--;}
+function pay(amount,plan){var options={key:"rzp_live_TpGTvl0tOG4uYY",amount:amount*100,currency:"INR",name:"ViralSpark AI",description:plan+" Plan",handler:function(res){alert("SUCCESS! "+plan+" ID: "+res.razorpay_payment_id)},prefill:{name:"Founder",email:"founder@viralspark.ai"},theme:{color:"#a855f7"}};var rzp=new Razorpay(options);rzp.open();}
+</script>
+</body>
+</html>
