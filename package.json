@@ -1,0 +1,21 @@
+{
+  "name": "viralspark-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mobile-first creator tools MVP with local project saving and optional secure AI backend.",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "razorpay": "^2.9.8"
+  }
+}
