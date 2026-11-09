@@ -1,3 +1,9 @@
 .env
-.next
 node_modules
+.next
+*.RUINED-BACKUP
+*.before-plans
+*.before-payments
+*.before-razorpay
+*.backup
+backups/
