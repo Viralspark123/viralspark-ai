@@ -1,1 +1,45 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="theme-color" content="#080a12"/><meta name="description" content="ViralSpark AI helps creators plan Shorts, Reels, titles, hooks and captions."/><title>ViralSpark AI — Creator Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"/></head><body><div class="app-shell"><aside class="sidebar"><a class="brand" href="#home"><span class="brand-mark">✦</span><span>ViralSpark<span class="brand-ai"> AI</span><small>CREATOR STUDIO</small></span></a><div class="side-label">WORKSPACE</div><nav id="navigation"><button class="nav-item active" data-page="home"><span>⌂</span> Home</button><button class="nav-item" data-page="create"><span>✳</span> Create</button><button class="nav-item" data-page="meme"><span>▧</span> Meme maker <span class="soon">BETA</span></button><button class="nav-item" data-page="saved"><span>▤</span> Saved projects <span id="saved-count" class="count">0</span></button></nav><div class="sidebar-bottom"><div class="plan-card"><div class="plan-icon">✦</div><strong>Your creative streak starts here.</strong><p>Turn a blank page into your next idea.</p><button class="small-cta" data-goto="create">Start creating <span>↗</span></button></div><button class="nav-item" data-page="settings"><span>⚙</span> Settings</button><div class="user-chip"><div class="avatar">VS</div><div><strong>Creator</strong><small>Free workspace</small></div><span class="online-dot"></span></div></div></aside><main class="main"><header class="topbar"><div class="mobile-brand"><span class="brand-mark">✦</span> ViralSpark AI</div><div class="breadcrumb">Creator Studio <span>/</span> <b id="crumb">Home</b></div><div class="top-actions"><span class="demo-pill"><i></i> Demo mode</span><button class="icon-btn" id="theme-help" aria-label="About demo mode" title="About demo mode">?</button></div></header><section id="page-content" class="content"></section><footer>Made for the next big idea <span>✦</span> <small>Your projects stay in this browser.</small></footer></main></div><div id="toast" role="status" aria-live="polite"></div><script src="app.js"></script><a href="plans.html" style="position:fixed;bottom:10px;right:22%;z-index:99999;display:flex;flex-direction:column;align-items:center;background:#1a102e;border:1px solid #a855f7;border-radius:14px;padding:6px 14px;text-decoration:none;color:white;font-size:11px;">💎 Plans</a></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="theme-color" content="#080a12"/><meta name="description" content="ViralSpark AI helps creators plan Shorts, Reels, titles, hooks and captions."/><title>ViralSpark AI — Creator Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"/></head><body><div class="app-shell"><aside class="sidebar"><a class="brand" href="#home"><span class="brand-mark">✦</span><span>ViralSpark<span class="brand-ai"> AI</span><small>CREATOR STUDIO</small></span></a><div class="side-label">WORKSPACE</div><nav id="navigation"><button class="nav-item active" data-page="home"><span>⌂</span> Home</button><button class="nav-item" data-page="create"><span>✳</span> Create</button><button class="nav-item" data-page="meme"><span>▧</span> Meme maker <span class="soon">BETA</span></button><button class="nav-item" data-page="saved"><span>▤</span> Saved projects <span id="saved-count" class="count">0</span></button></nav><div class="sidebar-bottom"><div class="plan-card"><div class="plan-icon">✦</div><strong>Your creative streak starts here.</strong><p>Turn a blank page into your next idea.</p><button class="small-cta" data-goto="create">Start creating <span>↗</span></button></div><button class="nav-item" data-page="settings"><span>⚙</span> Settings</button><div class="user-chip"><div class="avatar">VS</div><div><strong>Creator</strong><small>Free workspace</small></div><span class="online-dot"></span></div></div></aside><main class="main"><header class="topbar"><div class="mobile-brand"><span class="brand-mark">✦</span> ViralSpark AI</div><div class="breadcrumb">Creator Studio <span>/</span> <b id="crumb">Home</b></div><div class="top-actions"><span class="demo-pill"><i></i> Demo mode</span><button class="icon-btn" id="theme-help" aria-label="About demo mode" title="About demo mode">?</button></div></header><section id="page-content" class="content"></section><footer>Made for the next big idea <span>✦</span> <small>Your projects stay in this browser.</small></footer></main></div><div id="toast" role="status" aria-live="polite"></div><script src="app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  function addPlans(){
+    let saved=null;
+    document.querySelectorAll('*').forEach(el=>{
+      if(el.textContent.trim()==='Saved projects' || el.textContent.trim()==='Saved Projects'){
+      }
+    });
+    let nav=saved.parentElement;
+    // go up to find the bar with 4 tabs
+    for(let i=0;i<6;i++){
+      if(nav && nav.children.length>=4 && nav.textContent.includes('Home') && nav.textContent.includes('Create')) break;
+      if(nav.parentElement) nav=nav.parentElement;
+    }
+    // clone Create tab to keep same look
+    let createTab=null;
+    nav.querySelectorAll('*').forEach(el=>{ if(el.textContent.trim()==='Create') createTab=el.closest('a')||el.closest('div')||el.parentElement; });
+    let ref=createTab||saved.closest('a')||saved.closest('div')||saved;
+    let clone=ref.cloneNode(true);
+    clone.innerHTML = clone.innerHTML.replace('Create','Plans').replace('Home','Plans').replace(/Meme\s*maker/i,'Plans').replace('Saved projects','Plans').replace('Saved Projects','Plans');
+    // set icon
+    if(clone.innerHTML.includes('✴')||clone.innerHTML.includes('✳')||clone.innerHTML.includes('❋')){ }
+    // force text to Plans with same style
+    clone.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><div style="font-size:18px;">◈</div><div>Plans</div></div>';
+    clone.setAttribute('href','plans.html');
+    clone.style.flex='1';
+    clone.style.display='flex';
+    clone.style.flexDirection='column';
+    clone.style.alignItems='center';
+    clone.style.justifyContent='center';
+    clone.style.cursor='pointer';
+    clone.style.textDecoration='none';
+    clone.style.color='rgba(255,255,255,0.7)';
+    clone.onclick=function(){ location.href='plans.html'; };
+    nav.appendChild(clone);
+    // make all 5 equal
+    Array.from(nav.children).forEach(c=>{ c.style.flex='1'; });
+  }
+  addPlans();
+  setTimeout(addPlans, 500);
+  setTimeout(addPlans, 1500);
+});
+</script>
+</body></html>
