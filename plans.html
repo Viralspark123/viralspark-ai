@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plans & Credits - ViralSpark AI</title>
+<style>
+body{margin:0;padding:20px;background:linear-gradient(180deg,#0f0a1a 0%,#1a0b2e 100%);color:white;font-family:sans-serif}
+.top{max-width:1200px;margin:0 auto 25px;background:linear-gradient(135deg,rgba(168,85,247,0.15),rgba(251,191,36,0.15));border:1px solid #a855f7;border-radius:20px;padding:18px;display:flex;justify-content:space-between;align-items:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1200px;margin:0 auto}
+.card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:24px;position:relative}
+.popular{border:2px solid #a855f7;box-shadow:0 0 20px rgba(168,85,247,0.35)}
+.glow{border:2px solid #ec4899;box-shadow:0 0 20px rgba(236,72,153,0.35)}
+.ultimate{border:2px solid #fbbf24;background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(168,85,247,0.1));box-shadow:0 0 28px rgba(251,191,36,0.35)}
+.badge{position:absolute;top:-11px;left:18px;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:bold}
+.b-free{background:#444} .b-pop{background:#a855f7} .b-glow{background:#ec4899} .b-ult{background:linear-gradient(90deg,#fbbf24,#f59e0b);color:#000}
+.btn{width:100%;padding:12px;border-radius:12px;border:none;font-weight:bold;margin-top:16px;cursor:pointer}
+.btn-free{background:rgba(255,255,255,0.1);color:white} .btn-pop{background:#8b5cf6;color:white} .btn-glow{background:linear-gradient(90deg,#ec4899,#8b5cf6);color:white} .btn-ult{background:linear-gradient(90deg,#fbbf24,#f59e0b);color:#000}
+.credits{max-width:1200px;margin:40px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.pack{background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:18px;padding:18px;text-align:center}
+</style>
+</head>
+<body>
+<div class="top">
+<div><div style="opacity:0.7;font-size:13px">YOUR CREDITS</div><div style="font-size:26px;font-weight:bold">⚡ 120 Credits Left</div><div style="font-size:12px;opacity:0.6">1 Idea = 1 Credit • Resets daily on Free</div></div>
+<div><button class="btn btn-glow" style="width:auto;padding:10px 20px" onclick="document.getElementById('packs').scrollIntoView({behavior:'smooth'})">+ Buy Credits</button></div>
+</div>
+
+<h2 style="text-align:center;font-size:30px">Plans for Every Creator</h2>
+<div class="grid">
+<div class="card"><span class="badge b-free">FREE FOREVER</span><h3>⚡ Free Spark</h3><h1>₹0</h1><div style="color:#4ade80">100 Credits / month</div><p style="opacity:0.8">✓ 10 Ideas/day<br>✓ 20 Hooks/day<br>✓ Title + Captions</p><button class="btn btn-free">Current Plan</button></div>
+<div class="card popular"><span class="badge b-pop">MOST LOVED</span><h3>🚀 Starter</h3><h1>₹99 <span style="font-size:13px;opacity:0.5">/mo</span></h1><div style="color:#4ade80">800 Credits / month</div><p style="opacity:0.8">✓ Unlimited Ideas<br>✓ Meme Maker<br>✓ 100 Projects<br>✓ UPI / GPay</p><button class="btn btn-pop">Get Starter ₹99</button></div>
+<div class="card glow"><span class="badge b-glow">GLOW EDITION</span><h3>🌟 Glow</h3><h1>₹199 <span style="font-size:13px;opacity:0.5">/mo</span></h1><div style="color:#fbbf24">2000 Credits / month</div><p style="opacity:0.8">✓ Thumbnail Maker<br>✓ Trend Scanner<br>✓ 500 Projects<br>✓ Priority Support</p><button class="btn btn-glow">Glow ₹199</button></div>
+<div class="card ultimate"><span class="badge b-ult">ULTIMATE</span><h3>💎 Ultimate</h3><h1>₹499 <span style="font-size:13px;opacity:0.5">/mo</span></h1><div style="color:#fbbf24">7000 Credits / month</div><p style="opacity:0.8">✓ Unlimited Everything<br>✓ Team 5 Members<br>✓ Growth Call<br>✓ API Access</p><button class="btn btn-ult">Ultimate ₹499</button></div>
+</div>
+
+<h3 id="packs" style="text-align:center;margin-top:50px">🔋 Buy Credit Packs</h3>
+<div class="credits">
+<div class="pack"><h3>⚡ 100 Credits</h3><h2>₹49</h2><button class="btn btn-free">Buy 100</button></div>
+<div class="pack" style="border:2px solid #ec4899"><h3>🌟 500 Credits</h3><h2>₹149</h2><div style="color:#4ade80;font-size:13px">Most Popular</div><button class="btn btn-glow">Buy 500</button></div>
+<div class="pack" style="border:2px solid #fbbf24"><h3>💎 2000 Credits</h3><h2>₹499</h2><button class="btn btn-ult">Buy 2000</button></div>
+</div>
+<a href="index.html" style="color:#a855f7;display:block;text-align:center;margin-top:40px;text-decoration:none">← Back to Home</a>
+</body>
+</html>
