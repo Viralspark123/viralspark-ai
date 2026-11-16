@@ -298,3 +298,72 @@ footer {
   }
 }
 
+/* WHITE PORTFOLIO STYLE — PRESERVE PURPLE NEON ACCENTS */
+
+/* Main text only */
+.brand,
+.breadcrumb b,
+.hero h1,
+.page-title,
+.section-head h2,
+.panel h3,
+.tool-card h3,
+.plan-card strong,
+.field label,
+.result-placeholder strong,
+.recent-item strong {
+  color: #171923 !important;
+}
+
+/* Supporting text */
+.side-label,
+.breadcrumb,
+.hero p,
+.page-desc,
+.tool-card p,
+.panel-sub,
+.field small,
+.recent-item small {
+  color: #777f90 !important;
+}
+
+/* White portfolio boxes */
+.hero,
+.tool-card,
+.panel,
+.form-panel,
+.results-panel,
+.plan-card,
+.saved-card {
+  background-color: #ffffff !important;
+  border-color: #e5e8ef !important;
+  box-shadow:
+    0 4px 18px rgba(25,35,65,.045),
+    0 0 12px rgba(255,255,255,.9) !important;
+}
+
+/* Preserve purple neon accents */
+.brand-ai,
+.eyebrow,
+.text-link,
+.gradient-text,
+.primary-btn,
+.secondary-btn,
+.small-cta,
+.nav-item.active,
+.tool-icon,
+.icon-blue,
+.icon-purple,
+.icon-cyan,
+.icon-pink,
+.plan-icon,
+.result-num,
+.type-tag {
+  /* Keep original accent styling */
+}
+
+/* Subtle white portfolio hover */
+.tool-card:hover {
+  border-color: #d7ddf0 !important;
+  box-shadow: 0 6px 24px rgba(90,110,170,.10) !important;
+}
